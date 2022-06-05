@@ -13,6 +13,7 @@
 		B1318B8C284BE9B900DEF15D /* RemoteAddAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1318B8B284BE9B900DEF15D /* RemoteAddAccountTests.swift */; };
 		B1318B95284BE9E800DEF15D /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1318B6F284BE6BB00DEF15D /* Domain.framework */; };
 		B1318B96284BE9E800DEF15D /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1318B6F284BE6BB00DEF15D /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1318B9B284C81E000DEF15D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1318B9A284C81E000DEF15D /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		B1318B7F284BE9B900DEF15D /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1318B86284BE9B900DEF15D /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1318B8B284BE9B900DEF15D /* RemoteAddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountTests.swift; sourceTree = "<group>"; };
+		B1318B9A284C81E000DEF15D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				B1318B76284BE75600DEF15D /* AddAccount.swift */,
 				B1318B78284BE8EB00DEF15D /* AccountModel.swift */,
+				B1318B9A284C81E000DEF15D /* Model.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1318B9B284C81E000DEF15D /* Model.swift in Sources */,
 				B1318B77284BE75600DEF15D /* AddAccount.swift in Sources */,
 				B1318B79284BE8EB00DEF15D /* AccountModel.swift in Sources */,
 			);
