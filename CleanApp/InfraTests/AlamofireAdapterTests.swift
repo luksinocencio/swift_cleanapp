@@ -4,19 +4,6 @@ import XCTest
 @testable import Data
 @testable import Domain
 
-class AlamofireAdapter {
-    private let session: Session
-
-    init(session: Session = .default) {
-        self.session = session
-    }
-
-    func post(to url: URL, with data: Data?) {
-        let json = data?.toJson()
-        session.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).resume()
-    }
-}
-
 class AlamofireAdapterTests: XCTestCase {
     func test_post_should_make_request_with_valid_url_and_method() {
         let url = makeUrl()
@@ -32,6 +19,20 @@ class AlamofireAdapterTests: XCTestCase {
             XCTAssertNil(request.httpBodyStream)
         }
     }
+
+    func test_post_should_complete_with_error_when_request_completes_with_error() {
+        let sut = makeSut()
+        UrlProtocolStub.simulate(data: nil, response: nil, error: makeError())
+        let exp = expectation(description: "waiting")
+        sut.post(to: makeUrl(), with: makeValidData()) { result in
+            switch result {
+            case .failure(let error): XCTAssertEqual(error, .noConnectivity)
+            case .success: XCTFail("Expected error got \(result) instead")
+            }
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1)
+    }
 }
 
 extension AlamofireAdapterTests {
@@ -46,12 +47,11 @@ extension AlamofireAdapterTests {
 
     func testRequestFor(url: URL = makeUrl(), data: Data?, action: @escaping (URLRequest) -> Void) {
         let sut = makeSut()
-        sut.post(to: url, with: data)
         let exp = expectation(description: "waiting")
-        UrlProtocolStub.observerRequest { request in
-            action(request)
-            exp.fulfill()
-        }
+        sut.post(to: url, with: data) { _ in  exp.fulfill() }
+        var request: URLRequest?
+        UrlProtocolStub.observerRequest { request = $0 }
         wait(for: [exp], timeout: 1)
+        action(request!)
     }
 }
