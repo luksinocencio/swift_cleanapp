@@ -24,7 +24,7 @@ protocol HttpPostClient {
  - All tests have to start name with test
  */
 class RemoteAddAccountTests: XCTestCase {
-    
+
     func test_add_should_call_httpClient_with_correct_utl() {
         // prepare data
         guard let url = URL(string: "http://any-url.com") else { return }
@@ -39,7 +39,9 @@ class RemoteAddAccountTests: XCTestCase {
         /// result test
         XCTAssertEqual(httpClientSpy.url, url)
     }
-    
+}
+
+extension RemoteAddAccountTests {
     /// spy -> versão mockado do que precisamos
     class HttpClientSpy: HttpPostClient {
         var url: URL?
