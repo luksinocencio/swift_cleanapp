@@ -3,7 +3,7 @@ import Foundation
 // USE CASE
 
 public protocol AddAccount {
-    func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel,Error>) -> Void)
+    func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void)
 }
 
 public struct AddAccountModel: Model {
