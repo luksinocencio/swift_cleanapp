@@ -1,6 +1,6 @@
 import Foundation
 
-// USE CASE
+// MARK: - USE CASE ADDACCOUNT
 
 public protocol AddAccount {
     func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void)
