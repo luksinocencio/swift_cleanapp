@@ -23,6 +23,15 @@ class AlamofireAdapterTests: XCTestCase {
     func test_post_should_complete_with_error_when_request_completes_with_error() {
         expectResult(.failure(.noConnectivity), when: (data: nil, response: nil, error: makeError()))
     }
+
+    func test_post_should_complete_with_error_on_all_invalid_cases() {
+        expectResult(.failure(.noConnectivity), when: (data: makeValidData(), response: makeHttpResponse(), error: makeError()))
+        expectResult(.failure(.noConnectivity), when: (data: makeValidData(), response: nil, error: makeError()))
+        expectResult(.failure(.noConnectivity), when: (data: makeValidData(), response: nil, error: nil))
+        expectResult(.failure(.noConnectivity), when: (data: nil, response: makeHttpResponse(), error: makeError()))
+        expectResult(.failure(.noConnectivity), when: (data: nil, response: makeHttpResponse(), error: nil))
+        expectResult(.failure(.noConnectivity), when: (data: nil, response: nil, error: nil))
+    }
 }
 
 extension AlamofireAdapterTests {
