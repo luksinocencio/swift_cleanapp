@@ -1,15 +1,15 @@
 import Alamofire
-import Foundation
 import Data
+import Foundation
 
-class AlamofireAdapter: HttpPostClient {
+public final class AlamofireAdapter: HttpPostClient {
     private let session: Session
     
-    init(session: Session = .default) {
+    public init(session: Session = .default) {
         self.session = session
     }
     
-    func post(to url: URL, with data: Data?, completion: @escaping (Result<Data?, HttpError>) -> Void) {
+    public func post(to url: URL, with data: Data?, completion: @escaping (Result<Data?, HttpError>) -> Void) {
         let json = data?.toJson()
         session.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).responseData { dataResponse in
             guard let statusCode = dataResponse.response?.statusCode else {

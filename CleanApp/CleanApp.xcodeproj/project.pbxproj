@@ -299,6 +299,7 @@
 		B1318BBD284C9FC800DEF15D /* Infra */ = {
 			isa = PBXGroup;
 			children = (
+				B148B4FC284E879A001C2C9E /* Http */,
 			);
 			path = Infra;
 			sourceTree = "<group>";
@@ -306,11 +307,26 @@
 		B1318BC7284C9FC800DEF15D /* InfraTests */ = {
 			isa = PBXGroup;
 			children = (
+				B148B4FD284E881C001C2C9E /* Http */,
 				B1318BC8284C9FC800DEF15D /* AlamofireAdapterTests.swift */,
-				B11BBDA6284D627900A43B94 /* UrlProtocolStub.swift */,
-				B11BBDA8284D63A200A43B94 /* AlamofireAdapter.swift */,
 			);
 			path = InfraTests;
+			sourceTree = "<group>";
+		};
+		B148B4FC284E879A001C2C9E /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				B11BBDA8284D63A200A43B94 /* AlamofireAdapter.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		B148B4FD284E881C001C2C9E /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				B11BBDA6284D627900A43B94 /* UrlProtocolStub.swift */,
+			);
+			path = Http;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
