@@ -4,11 +4,11 @@ import Foundation
 
 public final class AlamofireAdapter: HttpPostClient {
     private let session: Session
-    
+
     public init(session: Session = .default) {
         self.session = session
     }
-    
+
     public func post(to url: URL, with data: Data?, completion: @escaping (Result<Data?, HttpError>) -> Void) {
         let json = data?.toJson()
         session.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).responseData { dataResponse in
