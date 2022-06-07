@@ -19,15 +19,21 @@ public struct SignUpViewModel {
 
 public final class SignUpPresenter {
     private var alertView: AlertView
+    private var emailValidator: EmailValidator
 
-    init(alertView: AlertView) {
+    init(alertView: AlertView, emailValidator: EmailValidator) {
         self.alertView = alertView
+        self.emailValidator = emailValidator
     }
 
     func signUp(viewModel: SignUpViewModel) {
         if let message = validate(viewModel: viewModel) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: message))
         }
+
+//        if let email = viewModel.email {
+//            emailValidator.isValid(email: email)
+//        }
     }
 
     private func validate(viewModel: SignUpViewModel) -> String? {
@@ -42,6 +48,7 @@ public final class SignUpPresenter {
         } else if viewModel.password != viewModel.passwordConfirmation {
             return "Falha ao confirmar senha"
         }
+        _ = emailValidator.isValid(email: viewModel.email!)
         return nil
     }
 }

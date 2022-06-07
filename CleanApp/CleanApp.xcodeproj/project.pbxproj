@@ -40,6 +40,7 @@
 		B148B606284E9944001C2C9E /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148B605284E9944001C2C9E /* AlamofireAdapter.swift */; };
 		B148B60E284E9C6A001C2C9E /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148B60D284E9C6A001C2C9E /* AddAccountIntegrationTests.swift */; };
 		B148B60F284E9C6A001C2C9E /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1318B7F284BE9B900DEF15D /* Data.framework */; };
+		B15A9E0B284FD5DA003812BB /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15A9E0A284FD5DA003812BB /* EmailValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +174,7 @@
 		B148B605284E9944001C2C9E /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		B148B60B284E9C6A001C2C9E /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B148B60D284E9C6A001C2C9E /* AddAccountIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountIntegrationTests.swift; sourceTree = "<group>"; };
+		B15A9E0A284FD5DA003812BB /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,6 +409,7 @@
 		B135B174284EFC6700179E8F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B15A9E09284FD5CA003812BB /* Validators */,
 				B135B195284F089D00179E8F /* Presenters */,
 				B135B193284F06E700179E8F /* Views */,
 			);
@@ -467,6 +470,14 @@
 				B148B60D284E9C6A001C2C9E /* AddAccountIntegrationTests.swift */,
 			);
 			path = UseCasesIntegrationTests;
+			sourceTree = "<group>";
+		};
+		B15A9E09284FD5CA003812BB /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				B15A9E0A284FD5DA003812BB /* EmailValidator.swift */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -845,6 +856,7 @@
 			files = (
 				B135B189284F05EC00179E8F /* SignUpPresenter.swift in Sources */,
 				B135B192284F065200179E8F /* AlertView.swift in Sources */,
+				B15A9E0B284FD5DA003812BB /* EmailValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
