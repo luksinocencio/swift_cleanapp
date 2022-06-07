@@ -33,6 +33,10 @@
 		B1318BDB284CA18F00DEF15D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B1318BDA284CA18F00DEF15D /* Alamofire */; };
 		B135B17B284EFC6700179E8F /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B135B173284EFC6700179E8F /* Presentation.framework */; };
 		B135B180284EFC6700179E8F /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135B17F284EFC6700179E8F /* SignUpPresenterTests.swift */; };
+		B135B189284F05EC00179E8F /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135B188284F05EC00179E8F /* SignUpPresenter.swift */; };
+		B135B18A284F060900179E8F /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1318B6F284BE6BB00DEF15D /* Domain.framework */; };
+		B135B18B284F060900179E8F /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1318B6F284BE6BB00DEF15D /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B135B192284F065200179E8F /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135B191284F065200179E8F /* AlertView.swift */; };
 		B148B606284E9944001C2C9E /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148B605284E9944001C2C9E /* AlamofireAdapter.swift */; };
 		B148B60E284E9C6A001C2C9E /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148B60D284E9C6A001C2C9E /* AddAccountIntegrationTests.swift */; };
 		B148B60F284E9C6A001C2C9E /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1318B7F284BE9B900DEF15D /* Data.framework */; };
@@ -73,6 +77,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B135B172284EFC6700179E8F;
 			remoteInfo = Presentation;
+		};
+		B135B18C284F060900179E8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1318B57284BE5F500DEF15D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1318B6E284BE6BB00DEF15D;
+			remoteInfo = Domain;
 		};
 		B148B610284E9C6A001C2C9E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -120,6 +131,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B135B18E284F060900179E8F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B135B18B284F060900179E8F /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +168,8 @@
 		B135B173284EFC6700179E8F /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B135B17A284EFC6700179E8F /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B135B17F284EFC6700179E8F /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
+		B135B188284F05EC00179E8F /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		B135B191284F065200179E8F /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		B148B605284E9944001C2C9E /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 		B148B60B284E9C6A001C2C9E /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B148B60D284E9C6A001C2C9E /* AddAccountIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountIntegrationTests.swift; sourceTree = "<group>"; };
@@ -196,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B135B18A284F060900179E8F /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +407,8 @@
 		B135B174284EFC6700179E8F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B135B195284F089D00179E8F /* Presenters */,
+				B135B193284F06E700179E8F /* Views */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -389,9 +416,33 @@
 		B135B17E284EFC6700179E8F /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
-				B135B17F284EFC6700179E8F /* SignUpPresenterTests.swift */,
+				B135B194284F088F00179E8F /* Presenters */,
 			);
 			path = PresentationTests;
+			sourceTree = "<group>";
+		};
+		B135B193284F06E700179E8F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B135B191284F065200179E8F /* AlertView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B135B194284F088F00179E8F /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				B135B17F284EFC6700179E8F /* SignUpPresenterTests.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		B135B195284F089D00179E8F /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				B135B188284F05EC00179E8F /* SignUpPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		B148B4FC284E879A001C2C9E /* Http */ = {
@@ -557,10 +608,12 @@
 				B135B16F284EFC6700179E8F /* Sources */,
 				B135B170284EFC6700179E8F /* Frameworks */,
 				B135B171284EFC6700179E8F /* Resources */,
+				B135B18E284F060900179E8F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B135B18D284F060900179E8F /* PBXTargetDependency */,
 			);
 			name = Presentation;
 			productName = Presentation;
@@ -635,6 +688,7 @@
 					};
 					B135B172284EFC6700179E8F = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					B135B179284EFC6700179E8F = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -789,6 +843,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B135B189284F05EC00179E8F /* SignUpPresenter.swift in Sources */,
+				B135B192284F065200179E8F /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,6 +891,11 @@
 			isa = PBXTargetDependency;
 			target = B135B172284EFC6700179E8F /* Presentation */;
 			targetProxy = B135B17C284EFC6700179E8F /* PBXContainerItemProxy */;
+		};
+		B135B18D284F060900179E8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1318B6E284BE6BB00DEF15D /* Domain */;
+			targetProxy = B135B18C284F060900179E8F /* PBXContainerItemProxy */;
 		};
 		B148B611284E9C6A001C2C9E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1236,6 +1297,7 @@
 		B135B182284EFC6700179E8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1259,6 +1321,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1266,6 +1329,7 @@
 		B135B183284EFC6700179E8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1296,6 +1360,7 @@
 		B135B184284EFC6700179E8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y65JAZKR5L;
@@ -1313,6 +1378,7 @@
 		B135B185284EFC6700179E8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y65JAZKR5L;
