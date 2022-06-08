@@ -24,7 +24,7 @@ public final class SignUpPresenter {
                 guard let self = self else { return }
                 switch result {
                 case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Algo inesperado acontenceu, tente novamente em alguns instantes."))
-                case .success: break
+                case .success: self.alertView.showMessage(viewModel: AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso."))
                 }
                 self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
             }
@@ -46,22 +46,5 @@ public final class SignUpPresenter {
             return "O campo Email é inválido"
         }
         return nil
-    }
-}
-
-public struct SignUpViewModel {
-    var name: String?
-    var email: String?
-    var password: String?
-    var passwordConfirmation: String?
-
-    init(name: String? = nil,
-         email: String? = nil,
-         password: String? = nil,
-         passwordConfirmation: String? = nil) {
-        self.name = name
-        self.email = email
-        self.password = password
-        self.passwordConfirmation = passwordConfirmation
     }
 }
