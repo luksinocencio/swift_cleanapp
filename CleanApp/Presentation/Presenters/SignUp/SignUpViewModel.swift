@@ -6,7 +6,7 @@ public struct SignUpViewModel {
     var password: String?
     var passwordConfirmation: String?
 
-    init(name: String? = nil,
+    public init(name: String? = nil,
          email: String? = nil,
          password: String? = nil,
          passwordConfirmation: String? = nil) {
