@@ -1,32 +1,17 @@
 import Foundation
 import Domain
 
-public struct SignUpViewModel {
-    var name: String?
-    var email: String?
-    var password: String?
-    var passwordConfirmation: String?
-
-    init(name: String? = nil,
-         email: String? = nil,
-         password: String? = nil,
-         passwordConfirmation: String? = nil) {
-        self.name = name
-        self.email = email
-        self.password = password
-        self.passwordConfirmation = passwordConfirmation
-    }
-}
-
 public final class SignUpPresenter {
-    private var alertView: AlertView
-    private var emailValidator: EmailValidator
-    private var addAccount: AddAccount
+    private let alertView: AlertView
+    private let emailValidator: EmailValidator
+    private let addAccount: AddAccount
+    private let loadingView: LoadingView
 
-    init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount) {
+    init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount, loadingView: LoadingView) {
         self.alertView = alertView
         self.emailValidator = emailValidator
         self.addAccount = addAccount
+        self.loadingView = loadingView
     }
 
     func signUp(viewModel: SignUpViewModel) {
@@ -34,6 +19,7 @@ public final class SignUpPresenter {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: message))
         } else {
             let addAccountModel = AddAccountModel(name: viewModel.name!, email: viewModel.email!, password: viewModel.password!, passwordConfirmation: viewModel.passwordConfirmation!)
+            loadingView.display(viewModel: LoadingViewModel(isLoading: true))
             addAccount.add(addAccountModel: addAccountModel) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
@@ -59,5 +45,22 @@ public final class SignUpPresenter {
             return "O campo Email é inválido"
         }
         return nil
+    }
+}
+
+public struct SignUpViewModel {
+    var name: String?
+    var email: String?
+    var password: String?
+    var passwordConfirmation: String?
+
+    init(name: String? = nil,
+         email: String? = nil,
+         password: String? = nil,
+         passwordConfirmation: String? = nil) {
+        self.name = name
+        self.email = email
+        self.password = password
+        self.passwordConfirmation = passwordConfirmation
     }
 }
