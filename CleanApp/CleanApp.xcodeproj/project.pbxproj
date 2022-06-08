@@ -48,6 +48,7 @@
 		B14AFD5128504A3F00BCC08D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14AFD5028504A3F00BCC08D /* LoadingView.swift */; };
 		B15A9E0B284FD5DA003812BB /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15A9E0A284FD5DA003812BB /* EmailValidator.swift */; };
 		B194F27A2851568F0046D535 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194F2792851568F0046D535 /* SignUpViewModel.swift */; };
+		B194F27C285157200046D535 /* SignUpMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194F27B285157200046D535 /* SignUpMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +193,7 @@
 		B14AFD5028504A3F00BCC08D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		B15A9E0A284FD5DA003812BB /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		B194F2792851568F0046D535 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		B194F27B285157200046D535 /* SignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -504,6 +506,7 @@
 			children = (
 				B135B188284F05EC00179E8F /* SignUpPresenter.swift */,
 				B194F2792851568F0046D535 /* SignUpViewModel.swift */,
+				B194F27B285157200046D535 /* SignUpMapper.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -884,6 +887,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B14AFD5128504A3F00BCC08D /* LoadingView.swift in Sources */,
+				B194F27C285157200046D535 /* SignUpMapper.swift in Sources */,
 				B135B189284F05EC00179E8F /* SignUpPresenter.swift in Sources */,
 				B135B192284F065200179E8F /* AlertView.swift in Sources */,
 				B14AFD4D2850392800BCC08D /* AccountModelFactory.swift in Sources */,
