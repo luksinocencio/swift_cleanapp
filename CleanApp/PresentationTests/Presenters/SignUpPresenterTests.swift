@@ -63,6 +63,15 @@ class SignUpPresenterTests: XCTestCase {
         sut.signUp(viewModel: makeSignUpViewModel())
         XCTAssertEqual(addAccountSpy.addAccountModel, makeAddAccountModel())
     }
+
+    func test_signUp_should_show_error_message_if_addAccount_fails() {
+        let alertViewSpy = AlertViewSpy()
+        let addAccountSpy = AddAccountSpy()
+        let sut = makeSut(alertView: alertViewSpy, addAccount: addAccountSpy)
+        sut.signUp(viewModel: makeSignUpViewModel())
+        addAccountSpy.completeWithError(.unexpected)
+        XCTAssertEqual(alertViewSpy.viewModel, makeErrorAlertViewModel(message: "Algo inesperado acontenceu, tente novamente em alguns instantes."))
+    }
 }
 
 extension SignUpPresenterTests {
@@ -93,19 +102,15 @@ extension SignUpPresenterTests {
         AlertViewModel(title: "Falha na validação", message: "O campo \(fieldName) é inválido")
     }
 
+    func makeErrorAlertViewModel(message: String) -> AlertViewModel {
+        return AlertViewModel(title: "Erro", message: message)
+    }
+
     class AlertViewSpy: AlertView {
         var viewModel: AlertViewModel?
 
         func showMessage(viewModel: AlertViewModel) {
             self.viewModel = viewModel
-        }
-    }
-
-    class AddAccountSpy: AddAccount {
-        var addAccountModel: AddAccountModel?
-
-        func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
-            self.addAccountModel = addAccountModel
         }
     }
 
@@ -122,4 +127,19 @@ extension SignUpPresenterTests {
             isValid = false
         }
     }
+
+    class AddAccountSpy: AddAccount {
+        var addAccountModel: AddAccountModel?
+        var completion: ((Result<AccountModel, DomainError>) -> Void)?
+
+        func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
+            self.addAccountModel = addAccountModel
+            self.completion = completion
+        }
+
+        func completeWithError(_ error: DomainError) {
+            completion?(.failure(error))
+        }
+    }
+    
 }
