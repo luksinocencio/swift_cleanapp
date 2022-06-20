@@ -11,5 +11,7 @@ class SignUpViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         XCTAssertEqual(sut.loadingIndicator?.isAnimating, false)
     }
+
+    
 }
 
