@@ -55,7 +55,9 @@
 		B194F28628515B1C0046D535 /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194F28528515B1C0046D535 /* LoadingViewSpy.swift */; };
 		B194F29428515F150046D535 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194F28828515CF20046D535 /* TestFactories.swift */; };
 		B1B4CEF928611CAD009255A1 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B4CEF128611CAD009255A1 /* UI.framework */; };
-		B1B4CEFE28611CAD009255A1 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4CEFD28611CAD009255A1 /* UITests.swift */; };
+		B1B4CEFE28611CAD009255A1 /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4CEFD28611CAD009255A1 /* SignUpViewControllerTests.swift */; };
+		B1B4CF1528611EF4009255A1 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B135B173284EFC6700179E8F /* Presentation.framework */; platformFilter = ios; };
+		B1B4CF1628611EF4009255A1 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B135B173284EFC6700179E8F /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +138,13 @@
 			remoteGlobalIDString = B1B4CEF028611CAD009255A1;
 			remoteInfo = UI;
 		};
+		B1B4CF1728611EF4009255A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1318B57284BE5F500DEF15D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B135B172284EFC6700179E8F;
+			remoteInfo = Presentation;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -169,6 +178,17 @@
 			files = (
 				B14AFD4A285038A200BCC08D /* Data.framework in Embed Frameworks */,
 				B135B18B284F060900179E8F /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1B4CF1928611EF4009255A1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B1B4CF1628611EF4009255A1 /* Presentation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +235,7 @@
 		B194F28828515CF20046D535 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		B1B4CEF128611CAD009255A1 /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B4CEF828611CAD009255A1 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1B4CEFD28611CAD009255A1 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
+		B1B4CEFD28611CAD009255A1 /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +308,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B4CF1528611EF4009255A1 /* Presentation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,7 +612,7 @@
 		B1B4CEFC28611CAD009255A1 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				B1B4CEFD28611CAD009255A1 /* UITests.swift */,
+				B1B4CEFD28611CAD009255A1 /* SignUpViewControllerTests.swift */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
@@ -801,10 +822,12 @@
 				B1B4CEED28611CAD009255A1 /* Sources */,
 				B1B4CEEE28611CAD009255A1 /* Frameworks */,
 				B1B4CEEF28611CAD009255A1 /* Resources */,
+				B1B4CF1928611EF4009255A1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B1B4CF1828611EF4009255A1 /* PBXTargetDependency */,
 			);
 			name = UI;
 			productName = UI;
@@ -1080,7 +1103,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1B4CEFE28611CAD009255A1 /* UITests.swift in Sources */,
+				B1B4CEFE28611CAD009255A1 /* SignUpViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1141,6 +1164,12 @@
 			isa = PBXTargetDependency;
 			target = B1B4CEF028611CAD009255A1 /* UI */;
 			targetProxy = B1B4CEFA28611CAD009255A1 /* PBXContainerItemProxy */;
+		};
+		B1B4CF1828611EF4009255A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = B135B172284EFC6700179E8F /* Presentation */;
+			targetProxy = B1B4CF1728611EF4009255A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1290,6 +1319,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1321,6 +1351,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1352,6 +1383,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1384,6 +1416,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1402,6 +1435,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devmeist3r.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1420,6 +1454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devmeist3r.DataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1550,6 +1585,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1582,6 +1618,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1600,6 +1637,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devmeist3r.PresentationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1618,6 +1656,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devmeist3r.PresentationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1682,6 +1721,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1712,6 +1752,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1729,6 +1770,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devmeist3r.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1746,6 +1788,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devmeist3r.UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
