@@ -58,8 +58,8 @@
 		B1B4CEFE28611CAD009255A1 /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4CEFD28611CAD009255A1 /* SignUpViewControllerTests.swift */; };
 		B1B4CF1528611EF4009255A1 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B135B173284EFC6700179E8F /* Presentation.framework */; platformFilter = ios; };
 		B1B4CF1628611EF4009255A1 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B135B173284EFC6700179E8F /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B1B4CF1B286121AC009255A1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4CF1A286121AC009255A1 /* SignUpViewController.swift */; };
-		B1B4CF1D28612528009255A1 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B4CF1C28612528009255A1 /* SignUp.storyboard */; };
+		B1B5CC0C2861F54B00DDAB85 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B5CC0B2861F54B00DDAB85 /* SignUp.storyboard */; };
+		B1B5CC0E2861F56900DDAB85 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5CC0D2861F56900DDAB85 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,8 +238,8 @@
 		B1B4CEF128611CAD009255A1 /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B4CEF828611CAD009255A1 /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B4CEFD28611CAD009255A1 /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
-		B1B4CF1A286121AC009255A1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = "../../../../../projects-picpay/apollo-ios/Sample/ViewModel/Tokens/Details/SignUpViewController.swift"; sourceTree = "<group>"; };
-		B1B4CF1C28612528009255A1 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SignUp.storyboard; path = "../../../../../projects-picpay/apollo-ios/Sample/ViewModel/Tokens/Details/SignUp.storyboard"; sourceTree = "<group>"; };
+		B1B5CC0B2861F54B00DDAB85 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		B1B5CC0D2861F56900DDAB85 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,7 +338,7 @@
 				B148B60C284E9C6A001C2C9E /* UseCasesIntegrationTests */,
 				B135B174284EFC6700179E8F /* Presentation */,
 				B135B17E284EFC6700179E8F /* PresentationTests */,
-				B1B4CEF228611CAD009255A1 /* UI */,
+				B1B5CC0A2861F53100DDAB85 /* UI */,
 				B1B4CEFC28611CAD009255A1 /* UITests */,
 				B1318B61284BE5F500DEF15D /* Products */,
 				B1318B94284BE9E800DEF15D /* Frameworks */,
@@ -606,21 +606,21 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		B1B4CEF228611CAD009255A1 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				B1B4CF1A286121AC009255A1 /* SignUpViewController.swift */,
-				B1B4CF1C28612528009255A1 /* SignUp.storyboard */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
 		B1B4CEFC28611CAD009255A1 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
 				B1B4CEFD28611CAD009255A1 /* SignUpViewControllerTests.swift */,
 			);
 			path = UITests;
+			sourceTree = "<group>";
+		};
+		B1B5CC0A2861F53100DDAB85 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B1B5CC0B2861F54B00DDAB85 /* SignUp.storyboard */,
+				B1B5CC0D2861F56900DDAB85 /* SignUpViewController.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -996,7 +996,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1B4CF1D28612528009255A1 /* SignUp.storyboard in Resources */,
+				B1B5CC0C2861F54B00DDAB85 /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1104,7 +1104,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1B4CF1B286121AC009255A1 /* SignUpViewController.swift in Sources */,
+				B1B5CC0E2861F56900DDAB85 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
