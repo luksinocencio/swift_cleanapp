@@ -18,6 +18,7 @@ class SignUpViewController: UIViewController {
     }
 
     private func configure() {
+        saveButton.layer.cornerRadius = 5
         saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
     }
 
@@ -38,6 +39,8 @@ extension SignUpViewController: LoadingView {
 
 extension SignUpViewController: AlertView {
     func showMessage(viewModel: AlertViewModel) {
-        
+        let alert = UIAlertController(title: viewModel.title, message: viewModel.message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 }
