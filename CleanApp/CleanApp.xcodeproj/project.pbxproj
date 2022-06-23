@@ -61,6 +61,7 @@
 		B1B5CC0C2861F54B00DDAB85 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B5CC0B2861F54B00DDAB85 /* SignUp.storyboard */; };
 		B1B5CC0E2861F56900DDAB85 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5CC0D2861F56900DDAB85 /* SignUpViewController.swift */; };
 		B1E971CB286496B500DB96D5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E971CA286496B500DB96D5 /* UIViewControllerExtensions.swift */; };
+		B1E971CD28649AA700DB96D5 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E971CC28649AA700DB96D5 /* Storyboarded.swift */; };
 		B1E99AD328648EC300DE9237 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E99AD228648EC300DE9237 /* TestExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -243,6 +244,7 @@
 		B1B5CC0B2861F54B00DDAB85 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		B1B5CC0D2861F56900DDAB85 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B1E971CA286496B500DB96D5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		B1E971CC28649AA700DB96D5 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		B1E99AD228648EC300DE9237 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -632,6 +634,7 @@
 			isa = PBXGroup;
 			children = (
 				B1E971CA286496B500DB96D5 /* UIViewControllerExtensions.swift */,
+				B1E971CC28649AA700DB96D5 /* Storyboarded.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1160,6 +1163,7 @@
 			files = (
 				B1E971CB286496B500DB96D5 /* UIViewControllerExtensions.swift in Sources */,
 				B1B5CC0E2861F56900DDAB85 /* SignUpViewController.swift in Sources */,
+				B1E971CD28649AA700DB96D5 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
