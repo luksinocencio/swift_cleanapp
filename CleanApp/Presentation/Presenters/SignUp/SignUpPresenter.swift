@@ -7,14 +7,14 @@ public final class SignUpPresenter {
     private let addAccount: AddAccount
     private let loadingView: LoadingView
 
-    init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount, loadingView: LoadingView) {
+    public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount, loadingView: LoadingView) {
         self.alertView = alertView
         self.emailValidator = emailValidator
         self.addAccount = addAccount
         self.loadingView = loadingView
     }
 
-    func signUp(viewModel: SignUpViewModel) {
+    public func signUp(viewModel: SignUpViewModel) {
         if let message = validate(viewModel: viewModel) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: message))
         } else {
