@@ -886,10 +886,18 @@
 			path = Composers;
 			sourceTree = "<group>";
 		};
-		E8A23EA029CC0AFF0047AF9D /* MainTests */ = {
+		E8642B2029CDF9980007B675 /* Composers */ = {
 			isa = PBXGroup;
 			children = (
 				E8A23EA829CC0B400047AF9D /* SignUpIntegrationTests.swift */,
+			);
+			path = Composers;
+			sourceTree = "<group>";
+		};
+		E8A23EA029CC0AFF0047AF9D /* MainTests */ = {
+			isa = PBXGroup;
+			children = (
+				E8642B2029CDF9980007B675 /* Composers */,
 			);
 			path = MainTests;
 			sourceTree = "<group>";
