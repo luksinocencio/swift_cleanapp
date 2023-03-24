@@ -67,7 +67,8 @@
 		E811E12229CD54DB00184A8A /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E811E12129CD54DB00184A8A /* Environment.swift */; };
 		E84D008E29CAD0EB000D8CED /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D008D29CAD0EB000D8CED /* UseCaseFactory.swift */; };
 		E84D009129CAD1E0000D8CED /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D009029CAD1E0000D8CED /* SignUpComposer.swift */; };
-		E8A23EA929CC0B400047AF9D /* SignUpIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A23EA829CC0B400047AF9D /* SignUpIntegrationTests.swift */; };
+		E8642B2229CDFE3E0007B675 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194F28828515CF20046D535 /* TestFactories.swift */; };
+		E8A23EA929CC0B400047AF9D /* SignUpComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A23EA829CC0B400047AF9D /* SignUpComposerTests.swift */; };
 		E8A23EAA29CC0D0F0047AF9D /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194F28328515AFC0046D535 /* AddAccountSpy.swift */; };
 		E8A23EAB29CC0D370047AF9D /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1318BAE284C9D3E00DEF15D /* TestExtensions.swift */; };
 		E8DBCD662997E6CC000A3B76 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DBCD5E2997E6CC000A3B76 /* Validation.framework */; };
@@ -371,7 +372,7 @@
 		E84D008D29CAD0EB000D8CED /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		E84D009029CAD1E0000D8CED /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 		E8A23E9F29CC0AFF0047AF9D /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8A23EA829CC0B400047AF9D /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
+		E8A23EA829CC0B400047AF9D /* SignUpComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposerTests.swift; sourceTree = "<group>"; };
 		E8DBCD5E2997E6CC000A3B76 /* Validation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DBCD652997E6CC000A3B76 /* ValidationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValidationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DBCD6A2997E6CD000A3B76 /* EmailValidatorAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapterTests.swift; sourceTree = "<group>"; };
@@ -889,7 +890,7 @@
 		E8642B2029CDF9980007B675 /* Composers */ = {
 			isa = PBXGroup;
 			children = (
-				E8A23EA829CC0B400047AF9D /* SignUpIntegrationTests.swift */,
+				E8A23EA829CC0B400047AF9D /* SignUpComposerTests.swift */,
 			);
 			path = Composers;
 			sourceTree = "<group>";
@@ -1580,7 +1581,8 @@
 			files = (
 				E8A23EAA29CC0D0F0047AF9D /* AddAccountSpy.swift in Sources */,
 				E8A23EAB29CC0D370047AF9D /* TestExtensions.swift in Sources */,
-				E8A23EA929CC0B400047AF9D /* SignUpIntegrationTests.swift in Sources */,
+				E8642B2229CDFE3E0007B675 /* TestFactories.swift in Sources */,
+				E8A23EA929CC0B400047AF9D /* SignUpComposerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
