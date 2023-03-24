@@ -2,10 +2,10 @@ import Foundation
 import Domain
 
 public final class SignUpPresenter {
-    private let alertView: AlertView
+    private weak var alertView: (AlertView)?
     private let emailValidator: EmailValidator
     private let addAccount: AddAccount
-    private let loadingView: LoadingView
+    private weak var loadingView: (LoadingView)?
 
     public init(alertView: AlertView, emailValidator: EmailValidator, addAccount: AddAccount, loadingView: LoadingView) {
         self.alertView = alertView
@@ -16,16 +16,16 @@ public final class SignUpPresenter {
 
     public func signUp(viewModel: SignUpViewModel) {
         if let message = validate(viewModel: viewModel) {
-            alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: message))
+            alertView?.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: message))
         } else {
-            loadingView.display(viewModel: LoadingViewModel(isLoading: true))
+            loadingView?.display(viewModel: LoadingViewModel(isLoading: true))
             addAccount.add(addAccountModel: SignUpMapper.toAddAccountModel(viewModel: viewModel)) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
-                case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Algo inesperado acontenceu, tente novamente em alguns instantes."))
-                case .success: self.alertView.showMessage(viewModel: AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso."))
+                case .failure: self.alertView?.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Algo inesperado acontenceu, tente novamente em alguns instantes."))
+                case .success: self.alertView?.showMessage(viewModel: AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso."))
                 }
-                self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
+                self.loadingView?.display(viewModel: LoadingViewModel(isLoading: false))
             }
         }
     }
