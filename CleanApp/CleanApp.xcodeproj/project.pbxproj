@@ -63,6 +63,7 @@
 		B1E971CB286496B500DB96D5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E971CA286496B500DB96D5 /* UIViewControllerExtensions.swift */; };
 		B1E971CD28649AA700DB96D5 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E971CC28649AA700DB96D5 /* Storyboarded.swift */; };
 		B1E99AD328648EC300DE9237 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E99AD228648EC300DE9237 /* TestExtensions.swift */; };
+		E811E11D29CD4A4300184A8A /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E811E11C29CD4A4300184A8A /* WeakVarProxy.swift */; };
 		E84D008E29CAD0EB000D8CED /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D008D29CAD0EB000D8CED /* UseCaseFactory.swift */; };
 		E84D009129CAD1E0000D8CED /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D009029CAD1E0000D8CED /* SignUpComposer.swift */; };
 		E8A23EA929CC0B400047AF9D /* SignUpIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A23EA829CC0B400047AF9D /* SignUpIntegrationTests.swift */; };
@@ -363,6 +364,7 @@
 		B1E971CA286496B500DB96D5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		B1E971CC28649AA700DB96D5 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		B1E99AD228648EC300DE9237 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		E811E11C29CD4A4300184A8A /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
 		E84D008D29CAD0EB000D8CED /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		E84D009029CAD1E0000D8CED /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 		E8A23E9F29CC0AFF0047AF9D /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -856,6 +858,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		E811E11B29CD4A2E00184A8A /* Proxies */ = {
+			isa = PBXGroup;
+			children = (
+				E811E11C29CD4A4300184A8A /* WeakVarProxy.swift */,
+			);
+			path = Proxies;
+			sourceTree = "<group>";
+		};
 		E84D008F29CAD1C4000D8CED /* Composers */ = {
 			isa = PBXGroup;
 			children = (
@@ -891,6 +901,7 @@
 		E8DBCD7F2997EE15000A3B76 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E811E11B29CD4A2E00184A8A /* Proxies */,
 				E84D008F29CAD1C4000D8CED /* Composers */,
 				E8DBCDAB2997F10C000A3B76 /* Factories */,
 				E8DBCD802997EE15000A3B76 /* AppDelegate.swift */,
@@ -1577,6 +1588,7 @@
 				E8DBCD812997EE15000A3B76 /* AppDelegate.swift in Sources */,
 				E84D009129CAD1E0000D8CED /* SignUpComposer.swift in Sources */,
 				E8DBCDAD2997F11D000A3B76 /* ControllerFactory.swift in Sources */,
+				E811E11D29CD4A4300184A8A /* WeakVarProxy.swift in Sources */,
 				E8DBCD832997EE15000A3B76 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
