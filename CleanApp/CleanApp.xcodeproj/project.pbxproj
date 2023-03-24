@@ -90,7 +90,6 @@
 		E8DBCDA32997EFBC000A3B76 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1B4CEF128611CAD009255A1 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E8DBCDA62997EFBC000A3B76 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DBCD5E2997E6CC000A3B76 /* Validation.framework */; };
 		E8DBCDA72997EFBC000A3B76 /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8DBCD5E2997E6CC000A3B76 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E8DBCDAD2997F11D000A3B76 /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DBCDAC2997F11D000A3B76 /* ControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -379,7 +378,6 @@
 		E8DBCD892997EE17000A3B76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8DBCD8C2997EE17000A3B76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8DBCD8E2997EE17000A3B76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8DBCDAC2997F11D000A3B76 /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -916,7 +914,6 @@
 		E8DBCDAB2997F10C000A3B76 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				E8DBCDAC2997F11D000A3B76 /* ControllerFactory.swift */,
 				E84D008D29CAD0EB000D8CED /* UseCaseFactory.swift */,
 			);
 			path = Factories;
@@ -1587,7 +1584,6 @@
 				E84D008E29CAD0EB000D8CED /* UseCaseFactory.swift in Sources */,
 				E8DBCD812997EE15000A3B76 /* AppDelegate.swift in Sources */,
 				E84D009129CAD1E0000D8CED /* SignUpComposer.swift in Sources */,
-				E8DBCDAD2997F11D000A3B76 /* ControllerFactory.swift in Sources */,
 				E811E11D29CD4A4300184A8A /* WeakVarProxy.swift in Sources */,
 				E8DBCD832997EE15000A3B76 /* SceneDelegate.swift in Sources */,
 			);
