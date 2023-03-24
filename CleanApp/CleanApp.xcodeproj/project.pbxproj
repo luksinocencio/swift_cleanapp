@@ -68,6 +68,7 @@
 		E84D008E29CAD0EB000D8CED /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D008D29CAD0EB000D8CED /* UseCaseFactory.swift */; };
 		E84D009129CAD1E0000D8CED /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84D009029CAD1E0000D8CED /* SignUpComposer.swift */; };
 		E8642B2229CDFE3E0007B675 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194F28828515CF20046D535 /* TestFactories.swift */; };
+		E8642B2529CE07EE0007B675 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8642B2429CE07EE0007B675 /* MainQueueDispatchDecorator.swift */; };
 		E8A23EA929CC0B400047AF9D /* SignUpComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A23EA829CC0B400047AF9D /* SignUpComposerTests.swift */; };
 		E8A23EAA29CC0D0F0047AF9D /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B194F28328515AFC0046D535 /* AddAccountSpy.swift */; };
 		E8A23EAB29CC0D370047AF9D /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1318BAE284C9D3E00DEF15D /* TestExtensions.swift */; };
@@ -371,6 +372,7 @@
 		E811E12129CD54DB00184A8A /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		E84D008D29CAD0EB000D8CED /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		E84D009029CAD1E0000D8CED /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
+		E8642B2429CE07EE0007B675 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		E8A23E9F29CC0AFF0047AF9D /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A23EA829CC0B400047AF9D /* SignUpComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposerTests.swift; sourceTree = "<group>"; };
 		E8DBCD5E2997E6CC000A3B76 /* Validation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -895,6 +897,14 @@
 			path = Composers;
 			sourceTree = "<group>";
 		};
+		E8642B2329CE07D40007B675 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				E8642B2429CE07EE0007B675 /* MainQueueDispatchDecorator.swift */,
+			);
+			path = Decorators;
+			sourceTree = "<group>";
+		};
 		E8A23EA029CC0AFF0047AF9D /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -922,6 +932,7 @@
 		E8DBCD7F2997EE15000A3B76 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E8642B2329CE07D40007B675 /* Decorators */,
 				E811E11E29CD538600184A8A /* Env */,
 				E811E11B29CD4A2E00184A8A /* Proxies */,
 				E84D008F29CAD1C4000D8CED /* Composers */,
@@ -1607,6 +1618,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E84D008E29CAD0EB000D8CED /* UseCaseFactory.swift in Sources */,
+				E8642B2529CE07EE0007B675 /* MainQueueDispatchDecorator.swift in Sources */,
 				E811E12229CD54DB00184A8A /* Environment.swift in Sources */,
 				E8DBCD812997EE15000A3B76 /* AppDelegate.swift in Sources */,
 				E84D009129CAD1E0000D8CED /* SignUpComposer.swift in Sources */,
