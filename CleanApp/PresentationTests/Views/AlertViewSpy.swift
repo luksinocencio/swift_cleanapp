@@ -1,6 +1,5 @@
 import Foundation
-
-@testable import Presentation
+import Presentation
 
 class AlertViewSpy: AlertView {
     var emit: ((AlertViewModel) -> Void)?

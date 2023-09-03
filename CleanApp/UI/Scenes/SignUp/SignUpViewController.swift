@@ -1,3 +1,4 @@
+import Foundation
 import UIKit
 import Presentation
 
@@ -9,7 +10,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
 
-    public var signUp: ((SignUpViewModel) -> Void)?
+    public var signUp: ((SignUpRequest) -> Void)?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,27 +18,26 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     }
 
     private func configure() {
-        saveButton.layer.cornerRadius = 5
-        saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        title = "4Dev"
+        saveButton?.layer.cornerRadius = 5
+        saveButton?.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
         hideKeyboardOnTap()
-        loadingIndicator.isHidden = true
     }
 
-    @objc func saveButtonTapped() {
-        signUp?(SignUpViewModel(name: nameTextField?.text, email: emailTextField?.text, password: passwordTextField?.text, passwordConfirmation: passwordConfirmationTextField?.text))
+    @objc private func saveButtonTapped() {
+        let viewModel = SignUpRequest(name: nameTextField?.text, email: emailTextField?.text, password: passwordTextField?.text, passwordConfirmation: passwordConfirmationTextField?.text)
+        signUp?(viewModel)
     }
 }
 
 extension SignUpViewController: LoadingView {
     public func display(viewModel: LoadingViewModel) {
         if viewModel.isLoading {
-            loadingIndicator.isHidden = false
             view.isUserInteractionEnabled = false
             loadingIndicator?.startAnimating()
         } else {
             view.isUserInteractionEnabled = true
             loadingIndicator?.stopAnimating()
-            loadingIndicator.isHidden = true
         }
     }
 }
@@ -45,7 +45,7 @@ extension SignUpViewController: LoadingView {
 extension SignUpViewController: AlertView {
     public func showMessage(viewModel: AlertViewModel) {
         let alert = UIAlertController(title: viewModel.title, message: viewModel.message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
         present(alert, animated: true)
     }
 }

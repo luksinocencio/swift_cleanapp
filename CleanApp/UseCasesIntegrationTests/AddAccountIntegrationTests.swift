@@ -1,27 +1,34 @@
 import XCTest
-
-@testable import Data
-@testable import Domain
-@testable import Infra
+import Data
+import Infra
+import Domain
 
 class AddAccountIntegrationTests: XCTestCase {
-    // TODO: - Usar Api local
     func test_add_account() {
         let alamofireAdapter = AlamofireAdapter()
-        let url = URL(string: "https://clean-node-api.herokuapp.com/api/signup")!
+        let url = URL(string: "https://fordevs.herokuapp.com/api/signup")!
         let sut = RemoteAddAccount(url: url, httpClient: alamofireAdapter)
-        let addAccountModel = AddAccountModel(name: "Lucas Inocencio", email: "luksinocencio@outlook.com", password: "secret", passwordConfirmation: "secret")
+        let addAccountModel = AddAccountModel(name: "Rodrigo Manguinho", email: "\(UUID().uuidString)@gmail.com", password: "secret", passwordConfirmation: "secret")
         let exp = expectation(description: "waiting")
         sut.add(addAccountModel: addAccountModel) { result in
             switch result {
             case .failure: XCTFail("Expect success got \(result) instead")
             case .success(let account):
-                XCTAssertNil(account.id)
-                XCTAssertEqual(account.name, addAccountModel.name)
-                XCTAssertEqual(account.email, addAccountModel.email)
+                XCTAssertNotNil(account.accessToken)
             }
             exp.fulfill()
         }
-        wait(for: [exp], timeout: 10)
+        wait(for: [exp], timeout: 5)
+        let exp2 = expectation(description: "waiting")
+        sut.add(addAccountModel: addAccountModel) { result in
+            switch result {
+            case .failure(let error) where error == .emailInUse:
+                XCTAssertNotNil(error)
+            default:
+                XCTFail("Expect emailInUse error got \(result) instead")
+            }
+            exp2.fulfill()
+        }
+        wait(for: [exp2], timeout: 5)
     }
 }

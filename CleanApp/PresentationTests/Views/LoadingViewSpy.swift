@@ -1,6 +1,5 @@
 import Foundation
-
-@testable import Presentation
+import Presentation
 
 class LoadingViewSpy: LoadingView {
     var emit: ((LoadingViewModel) -> Void)?
